@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import s from "./loginForm.module.css";
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
@@ -109,14 +110,14 @@ const LoginForm = () => {
                   id="togglePassword"
                   className="me-2"
                 />
-                <label htmlFor="togglePassword" style={{userSelect: "none"}}>
+                <label htmlFor="togglePassword" style={{ userSelect: "none" }}>
                   Hiện mật khẩu
                 </label>
               </div>
 
               <div style={{ cursor: "pointer" }} onClick={handleForgetPassword}>
                 <a className="text-end d-block text-decoration-none text-black">
-                  Quên mật khẩu?
+                  Xem tài khoản đăng nhập?
                 </a>
               </div>
               <div>

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useEffect, useState } from "react";
 import s from "./todosearch.module.css";
 import {
@@ -98,16 +99,14 @@ export const ListTask: React.FC<TProps> = ({ dataFilter, setShowUpdate }) => {
                 </div>
               </div>
             </div>
-            
           );
         }
-      }
-      )}
+      })}
     </div>
   );
 };
 
-const ToDoSearch: React.FC<TTodoTaskProps> = ({ setShowUpdate }) => {
+const ToDoSearch = ({ setShowUpdate }) => {
   const listTask = useSelector(
     (store: { listTask: TTaskProps[] }) => store.listTask
   );

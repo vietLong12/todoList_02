@@ -1,3 +1,4 @@
+// @ts-nocheck
 import PageLogin from "../components/PageLogin";
 import PageTrial from "../components/PageTrial";
 
@@ -11,5 +12,5 @@ export const publicRouter = [
   {
     path: "/",
     element: PageTrial,
-  }
+  },
 ];

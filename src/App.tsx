@@ -1,11 +1,10 @@
-import { Route, Router, Routes, useNavigate } from "react-router-dom";
-import "./App.css";
-import LoginForm from "/src/components/LoginForm";
+import { Route, Routes } from "react-router-dom";
 import PageLogin from "./components/PageLogin";
 import { useSelector } from "react-redux";
 import { TStateProps } from "./components/types";
 import PageError from "./components/PageError/PageError";
 import RegisterForm from "./components/RegisterForm/RegisterForm";
+import LoginForm from "./components/RegisterForm/RegisterForm";
 
 function App() {
   const isLogin = useSelector((state: TStateProps) => {

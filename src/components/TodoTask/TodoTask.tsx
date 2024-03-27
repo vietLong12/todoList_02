@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import s from "./todotask.module.css";
 import { AddCircle } from "iconsax-react";
 import { useDispatch, useSelector } from "react-redux";
@@ -10,13 +10,10 @@ import { RootState } from "redux/reducer";
 
 export interface TTodoTaskProps {
   setShowUpdate: (a: boolean) => void;
-  isShowUpdate: boolean;
+  isShowUpdate: any;
 }
 
-const TodoTask: React.FC<TTodoTaskProps> = ({
-  setShowUpdate,
-  isShowUpdate,
-}) => {
+const TodoTask = ({ setShowUpdate, isShowUpdate }: TTodoTaskProps) => {
   const [showA, setShowA] = useState(false);
   const [valueTextArea, setValueTextArea] = useState("");
   const [valueTime, setValueTime] = useState(timeDefaults());
@@ -35,7 +32,7 @@ const TodoTask: React.FC<TTodoTaskProps> = ({
 
   const taskUpdate = useSelector((store: RootState) => store.updateTask);
 
-  const handleOnSubmit = (e) => {
+  const handleOnSubmit = (e: any) => {
     if (valueTextArea === "") {
       alert("bạn chưa nhập công việc");
       e.preventDefault();

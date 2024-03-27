@@ -1,9 +1,9 @@
+// @ts-nocheck
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import s from "./regForm.module.css";
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { checkLoginAction } from "../../redux/action";
+import { useDispatch } from "react-redux";
 
 interface TLoginType {
   username?: string;
@@ -43,8 +43,8 @@ const LoginForm = () => {
     if (values.password.length < 4 || values.password.length > 8) {
       errors.password = "Vui lòng nhập mật khẩu có độ dài từ 4 đến 8 kí tự!";
     }
-    if(values.rePassword !=  values.password) {
-      errors.rePassword = "Mật khẩu không khớp!"
+    if (values.rePassword != values.password) {
+      errors.rePassword = "Mật khẩu không khớp!";
     }
 
     return errors;

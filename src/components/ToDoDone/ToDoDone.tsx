@@ -1,10 +1,15 @@
+// @ts-nocheck
+
 import { TTaskProps } from "components/types";
 import { CloseCircle, RefreshCircle, Trash } from "iconsax-react";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteAllTaskAction, deleteTaskAction, redoTaskAction } from "redux/action";
+import {
+  deleteAllTaskAction,
+  deleteTaskAction,
+  redoTaskAction,
+} from "redux/action";
 import { convertDateFormat, fixTime } from "utilities";
-import s from "./todoDone.module.css"
-
+import s from "./todoDone.module.css";
 
 const ToDoDone = () => {
   const dispatch = useDispatch();

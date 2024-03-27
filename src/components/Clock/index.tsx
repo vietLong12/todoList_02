@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import s from "../Clock/clock.module.css";
 
-interface TClockProps {}
-
-const Clock: React.FC<TClockProps> = () => {
+const Clock = () => {
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {
@@ -49,7 +47,7 @@ const Clock: React.FC<TClockProps> = () => {
     time.getFullYear()
   );
   return (
-    <div 
+    <div
       className={s.clock}
     >{`${hour}:${minute}:${second} - ${day}, ${fullDateS}`}</div>
   );

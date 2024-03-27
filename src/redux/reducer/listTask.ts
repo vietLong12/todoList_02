@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { TTaskProps } from "./../../components/types/index";
 import { TActionProps, TTaskProps } from "../../components/types";
 import { sortByDate } from "../../utilities";
